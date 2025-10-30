@@ -1,0 +1,132 @@
+/* 🌈 Background gradient + animation */
+.login-bg {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientFlow 10s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🌸 Floating pastel bubbles */
+.floating-bubbles::before,
+.floating-bubbles::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25) 0%, transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.15) 0%, transparent 70%);
+    animation: floatBubbles 35s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes floatBubbles {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* 🌟 Login Box (Glassy Card) */
+.login-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+/* ✨ Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 1.2s ease forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 📝 Text styles */
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* 🔐 Input fields */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.3s;
+}
+
+.login-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-box input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* 🎨 Button */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-box button:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(135deg, #66a6ff, #89f7fe);
+}
+
+/* ✨ Footer text */
+.login-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+

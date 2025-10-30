@@ -1,0 +1,116 @@
+.recipe-bg-light {
+    background: radial-gradient(circle at top left, #f5f9ff 0%, #e8f2ff 40%, #e2f7f6 90%);
+    background-size: 400% 400%;
+    animation: gradientShiftLight 25s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubbles-light::before,
+.bubbles-light::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 5%, transparent 60%) repeat;
+    background-size: 200px 200px;
+    animation: moveBubblesLight 50s linear infinite;
+    opacity: 0.7;
+    filter: blur(3px);
+}
+
+.bubbles-light::after {
+    animation-duration: 80s;
+    background-size: 250px 250px;
+    opacity: 0.5;
+    filter: blur(5px);
+}
+
+@keyframes moveBubblesLight {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+}
+
+@keyframes gradientShiftLight {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🌈 Glass Card */
+.glass-card-light {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.glass-card-light:hover {
+    transform: translateY(-6px);
+}
+
+/* 🧊 Input Fields */
+.form-control {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(200, 200, 200, 0.4);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #9bbcff;
+    box-shadow: 0 0 8px rgba(155, 188, 255, 0.4);
+}
+
+/* 💡 Recipe Output Box */
+.recipe-text-light {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 12px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 250px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid rgba(180, 180, 180, 0.4);
+}
+
+/* 🌸 Gradient Buttons */
+.btn-gradient {
+    background: linear-gradient(135deg, #7db2ff, #b69efe);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #89c3ff, #c8aaff);
+    transform: scale(1.05);
+}
+
+.btn-outline-gradient {
+    border: 2px solid #9bbcff;
+    color: #4d4dff;
+    border-radius: 30px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gradient:hover {
+    background: linear-gradient(135deg, #9bbcff, #c5aaff);
+    color: white;
+}
+
+/* 🌈 Title Gradient */
+.text-gradient {
+    background: linear-gradient(90deg, #76b2fe, #b69efe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

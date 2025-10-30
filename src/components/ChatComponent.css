@@ -1,0 +1,100 @@
+/* 🌈 Soft Gradient Background */
+.chat-bg-dark {
+    position: relative;
+    background: radial-gradient(circle at center, #e0eafc, #cfdef3);
+    background-size: 400% 400%;
+    animation: softGradientShift 20s ease infinite;
+    overflow: hidden;
+}
+
+/* 🫧 Gentle Floating Bubbles */
+.chat-bg-dark::before,
+.chat-bg-dark::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 5%, transparent 60%) repeat;
+    background-size: 160px 160px;
+    animation: floatBubbles 60s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes floatBubbles {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* 🌤️ Smooth Color Motion */
+@keyframes softGradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 💬 Frosted Glass Card */
+.glass-card {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    border-radius: 16px;
+    color: #2e3a59;
+}
+
+/* 📝 Chat Text */
+.chat-text {
+    white-space: pre-wrap;
+    font-family: "Poppins", sans-serif;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 250px;
+    color: #2c3e50;
+}
+
+/* 🔘 Input + Button Styling */
+input.form-control {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #2e3a59 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+    color: #555 !important;
+}
+
+.btn-outline-light {
+    border-color: #6c63ff;
+    color: #6c63ff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.btn-outline-warning {
+    border-color: #f9a826;
+    color: #f9a826;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+    background-color: #f9a826;
+    color: white;
+}
